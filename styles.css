@@ -320,9 +320,11 @@ section h2 {
     align-items: center;
     gap: 1rem;
     color: var(--text-secondary);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    padding: 0.5rem;
+    border-radius: 8px;
 }
 
 .contact-info p::before {
@@ -337,7 +339,7 @@ section h2 {
         rgba(108, 92, 231, 0.1),
         transparent
     );
-    transition: left 0.3s ease;
+    transition: left 0.4s ease;
 }
 
 .contact-info p:hover::before {
@@ -345,18 +347,23 @@ section h2 {
 }
 
 .contact-info p:hover {
-    transform: translateX(10px) scale(1.02);
+    transform: translateX(10px);
     color: var(--accent-color);
+    background: rgba(108, 92, 231, 0.05);
 }
 
 .contact-info i {
     color: var(--accent-color);
-    transition: all 0.3s ease;
-    animation: glowPulse 2s infinite;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.2rem;
+    position: relative;
+    display: inline-block;
 }
 
 .contact-info p:hover i {
-    transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2) rotate(15deg);
+    color: var(--gradient-start);
+    text-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
 }
 
 /* Footer Styles */
