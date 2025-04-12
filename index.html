@@ -21,12 +21,12 @@
     </header>
 
     <main>
-        <section class="about">
+        <section class="about reveal">
             <h2>About Me</h2>
             <p>Passionate Android developer with 4 years of experience in creating innovative mobile applications. Specialized in Kotlin and Java development with a strong focus on clean architecture and material design principles.</p>
         </section>
 
-        <section class="skills">
+        <section class="skills reveal">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-item">
@@ -64,7 +64,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section class="projects reveal">
             <h2>Featured Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
@@ -94,7 +94,7 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact reveal">
             <h2>Contact</h2>
             <div class="contact-info">
                 <p><i class="fas fa-envelope"></i> robin.robinbaby007@gmail.com</p>
@@ -106,5 +106,26 @@
     <footer>
         <p>&copy; 2025 Robin Baby. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Scroll Reveal Animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', reveal);
+        // Trigger on initial load
+        reveal();
+    </script>
 </body>
 </html>
